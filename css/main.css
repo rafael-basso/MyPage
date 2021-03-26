@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+}
+
+.page {
+    display: flex;
+    min-height: 100vh;
+    background: linear-gradient(180deg, lightblue 10%,  black 80%);
+}

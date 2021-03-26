@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Page</title>
+
+    <!--PARA ADICIONAR O MAPA-->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+
+    <link rel="icon" href="/images/Eu.webp">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/aside-left.css">
+    <link rel="stylesheet" href="/css/aside-right.css">
+    <link rel="stylesheet" href="/css/map.css">
+    
+</head>
+
+<body>
+    <div class="page">
+
+        <aside class="left">
+            <img src="/images/Eu.webp">
+            <div class="links">
+                <a href="#images1" id="imageGallery">Images</a>
+                <a href="#details1" id="info">Contact</a>
+                <a href="#fatec1" id="fatec">School</a>
+            </div>
+        </aside>
+
+        <aside class="right" id="images1">
+            <img src="/images/chicago.JPG" id="imgLanding">
+
+            <div class="images">
+                <button onclick="selectImage(event); mostraResposta('chicago')" class="active">
+                    <img src="/images/chicago.JPG" />
+                </button>
+
+                <button onclick="selectImage(event); mostraResposta('grad')">
+                    <img src="/images/grad.JPG" />
+                </button>
+
+                <button onclick="selectImage(event); mostraResposta('ads')">
+                    <img src="/images/course.png" />
+                </button>
+
+                <button onclick="selectImage(event); mostraResposta('tools')">
+                    <img src="/images/Tools.png" />
+                </button>
+            </div>
+
+            <div class="picDetails">
+                <h1>Description</h1>
+                <p class="inicio">This is Chicago's skyline.</p>
+                <div id="chicago" class="faq"><span>This is Chicago's skyline.</span>
+                </div>
+                <div id="grad" class="faq"><span>Graduation day in English Proficiency from Intrax English School.
+                        Chicago - USA (February 2011)</span>
+                </div>
+                <div id="ads" class="faq"><span>Systems Analysis and Development - Course taken at Fatec
+                        Americana.</span>
+                </div>
+                <div id="tools" class="faq"><span>Tools and technologies seen during College studies.</span>
+                </div>
+            </div>
+
+
+            <div class="details" id="details1">
+                <div>
+                    <img src="/images/whatsapp.png"><span>(19) 99946-2275</span>
+                </div>
+                <div>
+                    <img src="/images/gitHub1.bmp">
+                    <a href="http://www.github.com/rafael-basso?tab=repositories"
+                        target="_blank"><span>Github</span></a>
+                </div>
+                <div class="email">
+                    <img src="/images/email.webp">
+                    <a href="http://www.outlook.com" target="_blank"><span>rafael_basso81@hotmail.com</span></a>
+                </div>
+            </div>
+
+            <div class="fatec" id="fatec1">
+                <h1>FATEC AMERICANA</h1>
+                <div class="map-container">
+                    <div id="map-id"></div>
+                    <footer>
+                        <p>College's location</p>
+                    </footer>
+                </div>
+
+                <div class="image">
+                    <h1>COLLEGE'S IMAGE</h1>
+                    <img src="/images/fatec.jfif" alt="">
+                </div>
+                <p>Course taken: Analysis and Systems Development. <br> (Graduation date: 2021)</p>
+            </div>
+        </aside>
+    </div>
+
+    <script src="/js/script.js"></script>
+
+</body>
+
+</html>
