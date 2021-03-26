@@ -6,6 +6,288 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Page</title>
 
+    <style> 
+        aside.left {
+    position: fixed; 
+    height: 100%;
+    padding: 40px 20px; 
+    background: linear-gradient(360deg, lightblue 10%,  black 80%);
+    /*z-index: 1;*/
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    /*border: 1px solid black;*/
+}
+
+div.links {
+    position: absolute;
+    top: 50vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 25vh;
+    
+    /*border: 1px solid black;*/
+}
+
+aside.left a {
+    font-size: 18pt;
+    color: white;
+    text-decoration: none;
+    
+    transition: 0.2s;
+}
+
+aside.left a:hover {
+    color:black;
+    text-decoration: underline;
+}
+
+aside.left img {
+    border-radius: 25px;
+}
+
+@media (max-width: 700px) {
+    aside.left img {
+        width: 30vw;
+        height: 30vh;
+    }
+}
+
+        aside.right {
+  width: 40vw;
+  margin: 15px auto;  
+  background: white;
+
+  border: 1px solid #d3e2e5;
+  border-radius: 20px;
+
+  overflow: hidden;
+  /*flex: 1; */
+  
+  border: 1px solid black;
+  position: relative;
+  left: 120px;
+}  
+
+@media (min-width: 700px) {
+  aside.right {
+    width: 60vw;
+    margin: 50px auto;
+    background: white;
+  
+    border: 1px solid #d3e2e5;
+    border-radius: 20px;
+  
+    overflow: hidden;
+    /*flex: 1;*/
+    
+    border: 1px solid black;
+    position: relative;
+    left: 120px;
+  }
+
+  /* IMAGES DETAILS */
+  .picDetails {
+    height: 40vh;
+  }
+
+  .picDetails h1 {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 30pt;
+  }
+  
+  .picDetails span {
+    font-size: 18pt;
+  }
+  
+  .picDetails p {
+    margin: 40px;
+    font-size: 18pt;
+    text-align: left;
+    display: inherit;
+  }  
+  
+}
+
+/* Image Landing */
+img#imgLanding {
+  width: 100%;
+  height: 50vh;
+  object-fit: fill;
+}
+
+/* IMAGES */
+.images {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 15px;
+  margin: 20px 40px 0;
+}
+
+.images button img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.images button {
+  border: 0;
+  background: none;
+
+  height: 20vh;
+  cursor: pointer;
+  border-radius: 10px;
+
+  overflow: hidden;
+
+  opacity: 0.6;
+  transition: 0.2s;
+}
+
+.images button:hover,
+.images button.active {
+  opacity: 1;
+}
+
+/* IMAGE DETAILS */
+.picDetails h1 {
+  text-align: center;
+}
+
+.picDetails p.inicio {
+  margin: 40px;
+  font-size: 18pt;
+  text-align: left;
+} 
+
+aside.right p{
+  margin: 10px;
+  font-size: 15pt;
+  text-align: center;  
+}
+
+/* TEXT */
+.faq {
+  margin: 40px;
+  display: none; /* coloca todos como invisiveis inicialmente */
+}
+
+/* INFO */
+div.details {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  row-gap: 10vh;
+  flex-direction: column;
+
+  border: 1px solid #b3dae2;
+  border-radius: 20px;
+  margin: 0 25px 10px 25px;
+
+  padding: 50px;
+
+  background: #e6f7fb;
+}
+
+div.details span {
+  font-size: 18pt;
+  margin-left: 50px;
+  
+  position: relative;
+  top: -25px;
+}
+
+div.email {
+  font-size: 18pt;
+}
+
+div.details a {
+  text-decoration: none;
+  color: black;
+  transition: 0.2s;
+}
+
+div.details a:hover {
+  color: rgb(70, 221, 151);
+  text-decoration: underline;
+}
+
+div.email img {
+  width: 6vw;
+  height: 9vh;
+}
+ 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+}
+
+.page {
+    display: flex;
+    min-height: 100vh;
+    background: linear-gradient(180deg, lightblue 10%,  black 80%);
+}
+
+
+.map-container{
+    margin-top: 10px;
+    background: #e6f7fb;
+    border: 1px solid #b3dae2;
+    border-radius: 20px;
+    margin: 0 25px 10px 25px;
+}
+
+#map-id{
+    width: 100%;
+    height: 70vh;
+    border-bottom: 1px solid #b3dae2;
+    border-radius: 20px;
+}
+
+.map-container footer{
+    /*padding: 0;*/
+    text-align: center;
+}
+
+.map-container footer p{
+    font-size: 15pt;
+    color: #5fa3b1;
+    display: inherit;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin: 30px;
+}
+
+div.image {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+div.image img {
+    width: 50%;
+    object-fit: cover;
+    padding-bottom: 20px;
+}
+        
+</style>
+    
     <!--PARA ADICIONAR O MAPA-->
     <link
       rel="stylesheet"
@@ -109,7 +391,74 @@
         </aside>
     </div>
 
-    <script src="/js/script.js"></script>
+    <script 
+           // MAPA
+const options = {
+    dragging: true,
+    touchZoom: false,
+    doubleClickZoom: false,
+    scrollWheelZoom: false,
+    zoomControl: true
+}
+
+//create map
+const map = L.map('map-id', options).setView([-22.7396591,-47.3497818,16.75], 15); // usar atributo ID e nao CLASS no html (map-id)
+
+//create and add tileLayer
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+//create and add marker
+L.marker([-22.7396591,-47.3497818,16.75]).addTo(map)
+    .bindPopup('Fatec Americana.').openPopup();
+
+//create icon
+const icon = L.icon({
+    /*iconUrl: "./Images/arrow.png",*/
+    iconSize: [58, 68],
+    iconAnchor: [29, 68]
+})
+
+
+
+// Image Gallery
+function selectImage(event){
+    const button = event.currentTarget // botao clicado
+
+    //console.log(button.children) // para mostrar no console do devtools
+
+    //remover todas as classes .active (so tem uma)
+    const buttons = document.querySelectorAll(".images button")
+    buttons.forEach(removeActiveClass) // para cada botao realizar a funcao
+
+    function removeActiveClass(button){ // esse button nao eh o button do currentTarget
+        button.classList.remove('active')
+    }
+
+    //selecionar a imagem clicada
+    const image = button.children[0]
+    const imageContainer = document.querySelector(".right > img")
+
+    //atualizar a imagem grande (container)
+    imageContainer.src = image.src
+
+    //adicionar a class .active para este botao
+    button.classList.add('active')
+}
+
+function mostraResposta(id){
+    var respostas = document.getElementsByClassName('faq'); //recebe os dados das divs de class="faq"
+    for (var i = 0; i < respostas.length; i++) { //pega o tamanho da div, ou seja, cada letra do texto
+      respostas[i].style.display = 'none'; 
+    }
+    
+    var clicada = document.getElementById(id); //recebe o id passado como argumento
+    clicada.style.display = 'inherit'; //faz ele ser exibido conforme o item pai
+
+    var inicio = document.querySelector('.inicio') //texto da landing page
+    inicio.style.display = 'none'  
+  }
+
+    </script>
 
 </body>
 
